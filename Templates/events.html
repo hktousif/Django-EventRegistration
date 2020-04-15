@@ -1,0 +1,17 @@
+{% extends "home.html" %}
+{% block content %}
+<div class="event" id="event">
+    <h1>Events</h1><br>
+    {% for i in events %}
+    <div class="event-gallery">
+        <a data-lightbox="image-1" data-title="{{ i.Event_Name }}" href="{{ i.Event_Poster.url }}"><img alt="" src="{{ i.Event_Poster.url }}"></a>
+        <div class="event-name">{{ i.Event_Name }}<br></div>
+        <div class="event-disc">
+            <ul>
+                <li>{{ i.About_Event }}</li>
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

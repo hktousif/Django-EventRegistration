@@ -1,0 +1,15 @@
+{% extends "home.html" %}
+{% block content %}
+<!-- Contact Us -->
+
+<div >
+    <h1>CONTACT US</h1>
+    {% for i in contacts %}
+    <p>{{ i.Full_Name }}</p>
+    <p>{{ i.Contact_No }}</p>
+    <p>{{ i.Email_ID }}</p>
+    <p>{{ i.Post }}</p>
+    <img src="{{ i.DP.url }}">
+    {% endfor %}
+</div>
+{% endblock content %}

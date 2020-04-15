@@ -1,0 +1,10 @@
+{% extends "home.html" %}
+{% block content %}
+<!-- Gallery -->
+<div class="gallery" id="gallery">
+    <h1>Mind Bend Gallery</h1>
+    {% for i in gallery %}
+    <a data-lightbox="image-1" data-title="" href="{{ i.Image.url }}"><img alt="" src="{{ i.Image.url }}">{{ i.AboutImage }}</a>
+    {% endfor %}
+</div>
+{% endblock content %}
