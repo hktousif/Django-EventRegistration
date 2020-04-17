@@ -1,0 +1,101 @@
+{% extends 'index.html' %}
+{% load staticfiles %}
+{% block content %}
+    <section class="card-section-imagia">
+        <h2 class="wobble animated">Team</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067"></div>
+                                <div class="user-imagia"><img class="img-circle" alt="" src="https://unsplash.it/120/120?image=64"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia">Name</h3>
+                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <p class="text-center"><em>Somthing about</em></p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia content-back-imagia">
+                                    <div>
+                                        <h3 class="text-center">Lorem Ipsum</h3>
+                                        <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                    </div>
+                                </div>
+                                <div class="footer-imagia">
+                                    <div class="social-imagia text-center"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia cover-gradient"></div>
+                                <div class="user-imagia"><img class="img-circle" alt="" src="https://unsplash.it/120/120?image=64"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia">Name</h3>
+                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia content-back-imagia">
+                                    <div>
+                                        <h3 class="text-center">Lorem Ipsum</h3>
+                                        <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                    </div>
+                                </div>
+                                <div class="footer-imagia">
+                                    <div class="social-imagia text-center"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067"></div>
+                                <div class="user-imagia"><img class="img-circle" alt="" src="https://unsplash.it/120/120?image=64"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia">Name</h3>
+                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <p class="text-center"><em><br>Somthing about<br><br></em></p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia content-back-imagia">
+                                    <div>
+                                        <h3 class="text-center">Lorem Ipsum</h3>
+                                        <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                    </div>
+                                </div>
+                                <div class="footer-imagia">
+                                    <div class="social-imagia text-center"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-twitter"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="contact-clean">
+        <form data-bs-hover-animate="swing" method="post">
+            <h2 class="text-center">Contact us</h2>
+            <div class="form-group"><input class="form-control" type="text" name="name" placeholder="Name"></div>
+            <div class="form-group"><input class="form-control is-invalid" type="email" name="email" placeholder="Email"><small class="form-text text-danger">Please enter a correct email address.</small></div>
+            <div class="form-group"><textarea class="form-control" name="message" placeholder="Message" rows="14"></textarea></div>
+            <div class="form-group"><button class="btn btn-primary" type="submit">send </button></div>
+        </form>
+    </div>
+{% endblock %}

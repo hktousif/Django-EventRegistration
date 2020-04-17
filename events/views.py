@@ -6,33 +6,37 @@ from .models import *
 def home_view(request):
     # obj = HomeSlidesModel.objects.all()
     # context = {'slides': obj}
-    return render(request, "home.html")
+    return render(request, "index.html")
 
 
 def protocols_view(request):
-    obj = ProtocolsModel.objects.all()
-    context = {'prot': obj.values, }
-    return render(request, "protocols.html", context)
+    # obj = ProtocolsModel.objects.all()
+    # context = {'prot': obj.values, }
+    return render(request, "protocols.html")
 
 
 def events_view(request):
-    obj = EventsModel.objects.all()
-    context = {"events": obj}
-    return render(request, "events.html", context)
+    # obj = EventsModel.objects.all()
+    # context = {"events": obj}
+    return render(request, "events.html")
 
 
 def about_view(request):
-    obj = AboutModel.objects.all()
-    return render(request, "about_ibmr.html", {"obj": obj})
+    # obj = AboutModel.objects.all()
+    return render(request, "about_ibmr.html")
 
 
 def gallery_view(request):
-    obj = GalleryModel.objects.all()
-    context = {'gallery': obj}
-    return render(request, "gallery.html", context)
+    # obj = GalleryModel.objects.all()
+    # context = {'gallery': obj}
+    return render(request, "gallery.html")
 
 
-def contact_view(request):
-    obj = ContactModel.objects.all()
-    context = {'contacts': obj}
-    return render(request, "contact.html", context)
+def support_view(request):
+    return render(request, "support.html")
+
+
+def register_view(request):
+
+    context = {}
+    return render(request, "register.html", context)

@@ -1,11 +1,22 @@
-{% extends "home.html" %}
+{% extends 'index.html' %}
+{% load staticfiles %}
 {% block content %}
-<ul class="list-group" id="protocols">
-    <h1>Protocols to Follow</h1>
-    <ul class="fa-ul">
-        {% for i in prot %}
-            <li class="list-group-item"><i class="fa-li fa fa-square"></i>{{ i.protocol }}</li>
-        {% endfor %}
-    </ul>
-</ul>
-{% endblock content %}
+    <div class="intro">
+        <h2 class="text-center">Protocols</h2>
+        <p class="text-center"><br>Somethong about protocols<br><br></p>
+    </div>
+    <div class="row">
+        <div class="col-md-4 d-block item fcard" id="fcard1" style="margin-top: 10px;margin-bottom: 10px;">
+            <h3 class="text-center"><i class="icon ion-alert-circled d-lg-flex justify-content-lg-center" style="padding: 5px;"></i><br>1</h3>
+            <p>Protocols&nbsp;Protocols Protocols<br></p>
+        </div>
+        <div class="col-md-4 d-block item fcard" id="fcard1" style="margin-top: 10px;margin-bottom: 10px;">
+            <h3 class="text-center"><i class="icon ion-alert-circled d-lg-flex justify-content-lg-center" style="padding: 5px;"></i><br>2</h3>
+            <p><br>Protocols&nbsp;Protocols&nbsp;Protocols<br><br></p>
+        </div>
+        <div class="col-md-4 d-block item fcard" id="fcard1" style="margin-top: 10px;margin-bottom: 10px;">
+            <h3 class="text-center"><i class="icon ion-alert-circled d-lg-flex justify-content-lg-center" style="padding: 5px;"></i><br>3</h3>
+            <p><br>Protocols&nbsp;Protocols&nbsp;Protocols<br><br></p>
+        </div>
+    </div>
+{% endblock %}

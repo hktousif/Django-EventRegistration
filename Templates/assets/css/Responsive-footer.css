@@ -1,0 +1,17 @@
+.list-inline {
+  text-align: center;
+}
+
+.footer {
+  background-color: rgba(58,47,47,0);
+  background-image: url("../../assets/img/footer.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 266px;
+  background-attachment: fixed;
+}
+
+.footer {
+  margin-top: -28px;
+}
+

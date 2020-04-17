@@ -1,17 +1,149 @@
-{% extends "home.html" %}
+{% extends 'index.html' %}
+{% load staticfiles %}
 {% block content %}
-<div class="event" id="event">
-    <h1>Events</h1><br>
-    {% for i in events %}
-    <div class="event-gallery">
-        <a data-lightbox="image-1" data-title="{{ i.Event_Name }}" href="{{ i.Event_Poster.url }}"><img alt="" src="{{ i.Event_Poster.url }}"></a>
-        <div class="event-name">{{ i.Event_Name }}<br></div>
-        <div class="event-disc">
-            <ul>
-                <li>{{ i.About_Event }}</li>
-            </ul>
+    <section class="card-section-imagia">
+        <h2 id="event-heading-id" class="event-heading">Events</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia">Event Name</h3>
+                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <p class="text-center"><em>Somthing about</em></p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia content-back-imagia">
+                                    <div>
+                                        <h3 class="text-center">Lorem Ipsum</h3>
+                                        <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia cover-gradient"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia">Event Name</h3>
+                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia content-back-imagia">
+                                    <div>
+                                        <h3 class="text-center">Lorem Ipsum</h3>
+                                        <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia">Event Name</h3>
+                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <p class="text-center"><em><br>Somthing about<br><br></em></p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia content-back-imagia">
+                                    <div>
+                                        <h3 class="text-center">Lorem Ipsum</h3>
+                                        <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia">Event Name</h3>
+                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <p class="text-center"><em><br>Somthing about<br><br></em></p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia content-back-imagia">
+                                    <div>
+                                        <h3 class="text-center">Lorem Ipsum</h3>
+                                        <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia">Event Name</h3>
+                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <p class="text-center"><em><br>Somthing about<br><br></em></p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia content-back-imagia">
+                                    <div>
+                                        <h3 class="text-center">Lorem Ipsum</h3>
+                                        <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <div class="card-container-imagia">
+                        <div class="card-imagia">
+                            <div class="front-imagia">
+                                <div class="cover-imagia"><img alt="" src="https://unsplash.it/720/500?image=1067"></div>
+                                <div class="content-imagia">
+                                    <h3 class="name-imagia">Event Name</h3>
+                                    <p class="subtitle-imagia">Subtitle </p>
+                                    <p class="text-center"><em><br>Somthing about<br><br></em></p>
+                                </div>
+                                <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span></div>
+                            </div>
+                            <div class="back-imagia">
+                                <div class="content-imagia content-back-imagia">
+                                    <div>
+                                        <h3 class="text-center">Lorem Ipsum</h3>
+                                        <p class="text-center"><br><em>Somthing about</em><br><br></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    {% endfor %}
-</div>
-{% endblock content %}
+    </section>
+{% endblock %}

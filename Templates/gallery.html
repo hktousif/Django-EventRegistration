@@ -1,10 +1,14 @@
-{% extends "home.html" %}
+{% extends 'index.html' %}
+{% load staticfiles %}
 {% block content %}
-<!-- Gallery -->
-<div class="gallery" id="gallery">
-    <h1>Mind Bend Gallery</h1>
-    {% for i in gallery %}
-    <a data-lightbox="image-1" data-title="" href="{{ i.Image.url }}"><img alt="" src="{{ i.Image.url }}">{{ i.AboutImage }}</a>
-    {% endfor %}
-</div>
-{% endblock content %}
+    <div class="container" id="gallery">
+        <div class="row flex-box flex-wrap-wrap">
+            <div class="col-sm-4 flex-box flex-justify-center flex-align-center" data-bs-hover-animate="pulse"><a class="fancybox" rel="gallery1" title="Hero Image Nature" href="{% static 'img/hero-background-nature.jpg' %}"><img class="img-fluid" src="{% static 'img/hero-background-nature.jpg' %}"></a></div>
+            <div class="col-sm-4 flex-box flex-justify-center flex-align-center" data-bs-hover-animate="pulse"><a class="fancybox" rel="gallery1" title="Hero Image Technology" href="{% static 'img/hero-background-technology.jpg' %}"><img class="img-fluid" src="{% static 'img/hero-background-technology.jpg' %}"></a></div>
+            <div class="col-sm-4 flex-box flex-justify-center flex-align-center" data-bs-hover-animate="pulse"><a class="fancybox" rel="gallery1" title="Hero Image Travel" href="{% static 'img/hero-background-travel.jpg' %}"><img class="img-fluid" src="{% static 'img/hero-background-travel.jpg' %}"></a></div>
+            <div class="col-sm-4 flex-box flex-justify-center flex-align-center" data-bs-hover-animate="pulse"><a class="fancybox" rel="gallery1" title="Hero Image Food" href="{% static 'img/hero-background-food.jpg' %}"><img class="img-fluid" src="{% static 'img/hero-background-food.jpg' %}"></a></div>
+            <div class="col-sm-4 flex-box flex-justify-center flex-align-center" data-bs-hover-animate="pulse"><a class="fancybox" rel="gallery1" title="Hero Image Music" href="{% static 'img/hero-background-music.jpg' %}"><img class="img-fluid" src="{% static 'img/hero-background-music.jpg' %}"></a></div>
+            <div class="col-sm-4 flex-box flex-justify-center flex-align-center" data-bs-hover-animate="pulse"><a class="fancybox" rel="gallery1" title="Hero Image Photography" href="{% static 'img/hero-background-photography.jpg' %}"><img class="img-fluid" src="{% static 'img/hero-background-photography.jpg' %}"></a></div>
+        </div>
+    </div>
+{% endblock %}

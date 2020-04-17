@@ -7,6 +7,7 @@ urlpatterns = [
     path('aboutibmr', about_view),
     path('events', events_view),
     path('gallery', gallery_view),
-    path('contact', contact_view),
+    path('support', support_view),
+    path('register', register_view),
     path('protocols', protocols_view),
 ]
