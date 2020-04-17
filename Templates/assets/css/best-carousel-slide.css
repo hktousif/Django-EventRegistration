@@ -1,4 +1,3 @@
-{% load staticfiles %}
 div.jumbotron.carousel-hero {
   color: #fff;
   text-align: center;
@@ -10,13 +9,6 @@ div.jumbotron.carousel-hero {
   background-attachment: fixed;
 }
 
-div.jumbotron.hero-nature {
-  background-image: url("static/img/architect-at-the-construction.jpg");
-}
-
-div.jumbotron.hero-photography {
-  background-image: url('../../assets/img/architects-and-worker.jpg');
-}
 
 div.jumbotron.hero-technology {
   background-image: url('https://ibmrcollege.weebly.com/uploads/5/8/3/4/5834750/mg-9276_orig.jpg');
