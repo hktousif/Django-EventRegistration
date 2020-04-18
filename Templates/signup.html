@@ -4,8 +4,13 @@
     <div class="register-photo" style="background-color: #dde1e7;height: 100vh;">
         <div class="swing animated form-container" style="background-color: #dde1e7;box-shadow: -3px -3px 5px #ffffff,3px 3px 15px #000000;">
             <div class="image-holder" style="background-image: url({% static 'img/young-college-students.jpg' %});"></div>
-            <form method="post" style="background-color: #dde1e7;">
+            <form method="post" style="background-color: #dde1e7;" action="{% url 'signup' %}">
+                {% csrf_token %}
                 <h2 class="text-center"><strong>Create</strong> an account.</h2>
+                {% if error %}
+                <h5 class="text-center" style="color:red;">{{ error }}</h5>
+                {% endif %}
+                <div class="form-group"><input class="form-control" type="text" name="username" placeholder="Username"></div>
                 <div class="form-group"><input class="form-control" type="email" name="email" placeholder="Email" required="" autofocus=""></div>
                 <div class="form-group"><input class="form-control" type="text" name="firstname" placeholder="Name"></div>
                 <div class="form-group"><input class="form-control" type="password" name="password" placeholder="Password"></div>

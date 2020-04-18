@@ -25,7 +25,6 @@ SECRET_KEY = 'wc$79oo1av9d@_53nic!n162(781bvn+jfs&7#g@_4-*n9w)9s'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -120,5 +119,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "Templates/assets"), ]
 MEDIA_ROOT = os.path.join(BASE_DIR, 'assets')
 MEDIA_URL = '/media/'
-LOGIN_URL = '/user/login/'
+LOGIN_URL = 'login'
 django_heroku.settings(locals())

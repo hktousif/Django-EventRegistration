@@ -41,17 +41,24 @@
                     </li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/">Home</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="/">AboutUs</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="../gallery">Gallery</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="../events">Events</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="../protocols">Protocols</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="../support">Support</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="../register">Register</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'gallery' %}">Gallery</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'events' %}">Events</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'protocols' %}">Protocols</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'support' %}">Support</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'register' %}">Register</a></li>
+                    {% if user.is_authenticated %}
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="user/login">
-                            <h6><i class="icon ion-log-in"></i>&nbsp;Log In</h6>
+                        <a class="nav-link" href="{% url 'logout' %}">
+                            <h6>{{ user.username }}</h6>
                         </a>
                     </li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#"></a></li>
+                    {% else %}
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" href="{% url 'login' %}">
+                            <h6><i class="icon ion-log-in"></i>Log In</h6>
+                        </a>
+                    </li>
+                    {% endif %}
                 </ul>
         </div>
         </div>
@@ -127,13 +134,6 @@
     {% endblock %}
     <div class="footer" style="background-image: url({% static 'img/footer.png' %})">
         <div class="container">
-            <ul class="list-inline" id="text_decoration" style="margin-top:30px;font-family:ABeeZee, sans-serif;">
-                <li class="list-inline-item"><a class="decoration" style="color:rgb(0,0,0);font-size:20px;margin-right:10px;" href="#">Home</a></li>
-                <li class="list-inline-item"><a style="font-size:20px;color:rgb(0,0,0);margin-right:10px;" href="#">Services</a></li>
-                <li class="list-inline-item"><a style="font-size:20px;color:rgb(0,0,0);margin-right:10px;" href="#">About</a></li>
-                <li class="list-inline-item"><a style="color:rgb(0,0,0);font-size:20px;margin-right:10px;" href="#">Terms</a></li>
-                <li class="list-inline-item"><a style="color:rgb(0,0,0);font-size:20px;" href="#">Privacy Policy</a></li>
-            </ul>
             <p class="text-center" style="margin-top:30px;margin-bottom:15px;"><a style="font-size:35px;margin-right:30px;" href="#"><i class="fa fa-facebook-square" style="color:rgb(0,0,0);margin-right:0px;"></i></a><a style="font-size:35px;margin-right:30px;" href="#"><i class="fa fa-instagram" style="color:rgb(0,0,0);margin-right:0px;"></i></a>
                 <a
                     style="font-size:35px;margin-right:30px;" href="#"><i class="icon ion-social-twitter" style="color:rgb(0,0,0);margin-right:2px;"></i></a><a style="font-size:35px;margin-right:30px;" href="#"><i class="icon ion-social-snapchat" style="color:rgb(0,0,0);margin-right:0px;"></i></a><a style="font-size:35px;"

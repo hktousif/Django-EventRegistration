@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, HttpResponse, redirect
 from .models import *
 
@@ -35,7 +36,7 @@ def gallery_view(request):
 def support_view(request):
     return render(request, "support.html")
 
-
+@login_required()
 def register_view(request):
 
     context = {}
