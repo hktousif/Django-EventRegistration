@@ -26,7 +26,7 @@ def profile_view(request):
 
 def logout_view(request):
     auth.logout(request)
-    return redirect('/')
+    return redirect('login')
 
 
 def login_view(request):
